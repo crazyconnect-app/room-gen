@@ -12,6 +12,7 @@ export const Button = ({
     primary: "bg-yellow-400 text-black shadow-[6px_6px_0px_black]",
     secondary: "bg-white text-black shadow-[6px_6px_0px_black]",
     danger: "bg-red-500 text-white shadow-[6px_6px_0px_black]",
+    active: "bg-green-400 text-black shadow-[6px_6px_0px_black]",
   };
 
   return (
@@ -24,5 +25,3 @@ export const Button = ({
     </button>
   );
 };
-
- 

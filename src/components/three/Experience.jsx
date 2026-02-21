@@ -4,6 +4,7 @@ import CameraRig from "./core/CameraRig";
 import Lighting from "./core/Lighting";
 import Controls from "./core/Controls";
 import SceneManager from "./systems/SceneManager";
+import WorldRenderer from "./world/WorldRenderer";
 
 const Experience = () => {
   return (
@@ -17,7 +18,8 @@ const Experience = () => {
         <CameraRig />
         <Lighting />
         <Controls />
-        <SceneManager />
+        {/* <SceneManager /> */}
+        <WorldRenderer />
       </Suspense>
     </Canvas>
   );

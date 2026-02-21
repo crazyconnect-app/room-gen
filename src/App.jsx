@@ -6,6 +6,7 @@ import { useUIPanelStore } from "./store/ui/panelStore";
 import Experience from "./components/three/Experience";
 import AssetStorePanel from "./components/ui/panels/asset-store/AssetStorePanel";
 import InventoryPanel from "./components/ui/panels/inventory/InventoryPanel";
+import TransformToolbar from "./components/ui/editor/TransformToolbar";
 
 function App() {
   const { openPanel } = useUIPanelStore();
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="relative w-full h-screen overflow-hidden">
       <Experience />
+      <TransformToolbar />
       {/* UI Button */}
       <Button
         onClick={() => openPanel("asset-store")}
