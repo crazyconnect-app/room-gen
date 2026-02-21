@@ -4,24 +4,32 @@ import { Button } from "./components/ui/shared/button/Button";
 import AssetPanel from "./components/ui/panels/asset-panel/AssetPanel";
 import { useUIPanelStore } from "./store/ui/panelStore";
 import Experience from "./components/three/Experience";
+import AssetStorePanel from "./components/ui/panels/asset-store/AssetStorePanel";
+import InventoryPanel from "./components/ui/panels/inventory/InventoryPanel";
 
 function App() {
   const { openPanel } = useUIPanelStore();
 
   return (
-    <div className="w-screen h-screen relative">
+    <div className="relative w-full h-screen overflow-hidden">
       <Experience />
       {/* UI Button */}
       <Button
-        onClick={() => openPanel("asset")}
-        className="z-30 fixed bottom-4 right-4 px-6 py-3 text-xl"
+        onClick={() => openPanel("asset-store")}
+        className="fixed bottom-4 right-4 px-6 py-3 z-30"
       >
-        Assets
+        Store
       </Button>
 
-      {/* UI Elements */}
-      <Overlay />
-      <AssetPanel />
+      <Button
+        onClick={() => openPanel("inventory")}
+        className="fixed bottom-4 left-4 px-6 py-3 z-30"
+      >
+        Inventory
+      </Button>
+
+      <AssetStorePanel />
+      <InventoryPanel />
     </div>
   );
 }
