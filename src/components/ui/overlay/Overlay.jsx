@@ -1,5 +1,10 @@
-export const Overlay = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
+import { useUIPanelStore } from "../../../store/ui/panelStore";
 
-  return <div onClick={onClose} className="fixed inset-0 bg-black/40 z-40" />;
+export const Overlay = () => {
+  const { activePanel, closePanel } = useUIPanelStore();
+  if (!activePanel) return null;
+
+  return (
+    <div onClick={closePanel} className="fixed inset-0 bg-black/40 z-40" />
+  );
 };
