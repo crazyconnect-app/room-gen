@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Overlay = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 

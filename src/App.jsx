@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 import { usePanel } from "./hooks/usePanel";
-import { Overlay } from "./components/ui/Overlay";
-import { SlidePanel } from "./components/ui/SlidePanel";
+import { Overlay } from "./components/ui/overlay/Overlay";
+import { SlidePanel } from "./components/ui/panel/SlidePanel";
+import { Button } from "./components/ui/shared/button/Button";
 
 function App() {
   const { isOpen, openPanel, closePanel } = usePanel();
@@ -10,12 +11,12 @@ function App() {
   return (
     <>
       {/* UI Button */}
-      <button
+      <Button
         onClick={openPanel}
-        className="z-30 fixed bottom-4 right-4 bg-yellow-400 border-4 border-black text-black px-6 py-3 font-extrabold text-xl shadow-[6px_6px_0px_black]"
+        className="z-30 fixed bottom-4 right-4 px-6 py-3 text-xl"
       >
         Assets
-      </button>
+      </Button>
 
       {/* UI Elements */}
       <Overlay isOpen={isOpen} onClose={closePanel} />

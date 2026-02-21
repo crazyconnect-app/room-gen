@@ -1,5 +1,6 @@
 import React from "react";
 import { AssetCard } from "./AssetCard";
+import { Button } from "../shared/button/Button";
 
 export const SlidePanel = ({ isOpen, onClose }) => {
   return (
@@ -11,12 +12,10 @@ export const SlidePanel = ({ isOpen, onClose }) => {
       {/* Header */}
       <div className="flex justify-between items-center p-4 border-b-4 border-black">
         <h2 className="text-2xl font-extrabold">Assets</h2>
-        <button
-          onClick={onClose}
-          className="bg-white border-4 border-black px-3 py-1 font-bold  shadow-[4px_4px_0px_black]"
-        >
+
+        <Button variant="secondary" onClick={onClose} className="px-3 py-1">
           X
-        </button>
+        </Button>
       </div>
       {/* Content */}
       <div className="p-4 space-y-4">
