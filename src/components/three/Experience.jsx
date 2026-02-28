@@ -9,8 +9,10 @@ import WorldRenderer from "./world/WorldRenderer";
 const Experience = () => {
   return (
     <Canvas
+      orthographic
       shadows
-      camera={{ position: [6, 6, 6], fov: 50 }}
+      camera={{ position: [10, 10, 10], zoom: 60, near: 0.1, far: 1000 }}
+      gl={{ physicallyCorrectLights: true }}
       dpr={2}
       className="absolute inset-0"
     >

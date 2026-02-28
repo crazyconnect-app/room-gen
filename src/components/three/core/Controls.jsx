@@ -8,6 +8,11 @@ const Controls = () => {
       enableDamping
       dampingFactor={0.1}
       maxPolarAngle={Math.PI / 2}
+      enableRotate={true}
+      enablePan={true}
+      enableZoom={true}
+      minZoom={30}
+      maxZoom={120}
     />
   );
 };
