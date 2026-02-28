@@ -11,14 +11,14 @@ export const useWorldStore = create((set) => ({
   setTransformMode: (mode) => set({ transformMode: mode }),
   toggleSnap: () => set((s) => ({ snapEnabled: !s.snapEnabled })),
 
-  addObject: (geometryType) =>
+  addObject: (asset) =>
     set((state) => ({
       placedObjects: [
         ...state.placedObjects,
         {
           id: nanoid(),
-          type: geometryType,
-          position: [0, 0.5, 0],
+          modelPath: asset.modelPath,
+          position: [0, 0, 0],
           rotation: [0, 0, 0],
           scale: [1, 1, 1],
         },

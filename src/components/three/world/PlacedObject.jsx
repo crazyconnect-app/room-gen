@@ -3,6 +3,7 @@ import { useRef } from "react";
 import GeometryFactory from "./GeometryFactory";
 import { useWorldStore } from "../../../store/world/worldStore";
 import ObjectControls from "./ObjectControls";
+import ModelFactory from "./ModelFactory";
 
 const PlacedObject = ({ object }) => {
   const ref = useRef();
@@ -20,7 +21,7 @@ const PlacedObject = ({ object }) => {
           selectObject(object.id);
         }}
       >
-        <GeometryFactory type={object.type} />
+        <ModelFactory modelPath={object.modelPath} />
       </group>
       {isSelected && <ObjectControls object={object} objectRef={ref} />}
     </>
