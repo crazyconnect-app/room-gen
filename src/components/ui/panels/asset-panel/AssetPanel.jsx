@@ -1,9 +1,11 @@
+import { useAssetCatalogStore } from "../../../../store/marketplace/assetCatalogStore";
 import { useUIPanelStore } from "../../../../store/ui/panelStore";
 import { Button } from "../../shared/button/Button";
 import { AssetCard } from "./AssetCard";
 
 const AssetPanel = () => {
   const { activePanel, closePanel } = useUIPanelStore();
+  const { assets } = useAssetCatalogStore();
 
   const isOpen = activePanel === "asset";
 
@@ -22,9 +24,9 @@ const AssetPanel = () => {
       </div>
 
       <div className="p-4 space-y-4">
-        <AssetCard name="Chair" />
-        <AssetCard name="Table" />
-        <AssetCard name="Plant" />
+        {assets.map((asset) => (
+          <AssetCard key={asset.id} asset={asset} />
+        ))}
       </div>
     </div>
   );

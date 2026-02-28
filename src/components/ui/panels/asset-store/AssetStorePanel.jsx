@@ -2,10 +2,13 @@ import { useGeometryStore } from "../../../../store/marketplace/geometryStore";
 import { useUIPanelStore } from "../../../../store/ui/panelStore";
 import GeometryCard from "./GeometryCard";
 import { Button } from "../../shared/button/Button";
+import { useAssetCatalogStore } from "../../../../store/marketplace/assetCatalogStore";
+import { AssetCard } from "../asset-panel/AssetCard";
 
 const AssetStorePanel = () => {
   const { activePanel, closePanel } = useUIPanelStore();
   const { geometries } = useGeometryStore();
+  const { assets } = useAssetCatalogStore();
   const isOpen = activePanel === "asset-store";
   return (
     <div
@@ -21,8 +24,8 @@ const AssetStorePanel = () => {
       </div>
 
       <div className="p-4 space-y-4">
-        {geometries.map((g) => (
-          <GeometryCard key={g.id} geometry={g} />
+        {assets.map((asset) => (
+          <AssetCard key={asset.id} asset={asset} />
         ))}
       </div>
     </div>

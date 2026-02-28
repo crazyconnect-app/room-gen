@@ -7,7 +7,7 @@ const WorldRenderer = () => {
   const { placedObjects, selectObject } = useWorldStore();
   return (
     <>
-      <GridHelper />
+      {/* <GridHelper /> */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} onClick={() => selectObject(null)}>
         <planeGeometry args={[50, 50]} />
         <meshStandardMaterial color="#a3e635" />
