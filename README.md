@@ -1,16 +1,145 @@
-# React + Vite
+# 🏠 Spatial Room — A Calm Digital Ownership Space
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A browser-based 3D room where users can decorate, personalize, and express identity in a spatial environment instead of traditional flat feeds.
 
-Currently, two official plugins are available:
+This project explores a simple idea:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- What if personal profiles were spaces, not pages?
 
-## React Compiler
+### Instead of scrolling through text and images, users interact with a room they control — placing objects, customizing layout, and shaping a digital territory.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# ✨ Core Concept
 
-## Expanding the ESLint configuration
+Modern web experiences feel flat — mostly text, images, and endless feeds.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project experiments with:
+
+- Spatial ownership
+- Calm interaction
+- Minimal, cozy environments
+- Expressive customization
+
+The goal is to create a digital space that feels personal rather than consumable.
+
+# 🚀 Current Version (v0.1)
+
+This version focuses only on interaction quality.
+
+Implemented:
+
+- Base 3D room
+
+- Asset inventory panel
+
+- Add assets to scene
+
+- Basic object placement
+
+- Limited rotation control
+
+- Zustand-based state management
+
+- React Three Fiber scene architecture
+
+Not implemented (intentionally):
+
+- Backend
+
+- Authentication
+
+- Multiplayer
+
+- Saving system
+
+- Marketplace
+
+- Premium assets
+
+The priority is validating the core interaction experience before scaling.
+
+## 🛠 Tech Stack
+
+Frontend:
+
+- React
+
+- Vite
+
+- React Three Fiber
+
+- Three.js
+
+- Zustand
+
+- TailwindCSS
+
+No backend in current version.
+
+## 🧠 Architecture Direction
+
+The system is designed to scale toward:
+
+- Persistent rooms
+
+- Public room sharing
+
+- Social interaction
+
+- Asset marketplace
+
+- Premium digital items
+
+- Spatial identity profiles
+
+Current focus is interaction satisfaction before infrastructure complexity.
+
+# 🎯 Vision
+
+This project is an experiment in moving from:
+
+Flat profile pages
+→
+Spatial digital identity
+
+Instead of showing content, users shape an environment.
+
+If the experience feels meaningful and engaging, the system will evolve toward:
+
+- Persistent online rooms
+
+- Shareable links
+
+- Social visitation
+
+- Status signaling through rare assets
+
+## ⚠️ Status
+
+Active experimental build.
+
+Focus:
+Interaction quality > feature quantity.
+
+## 🧪 Why This Exists
+
+Because the web feels increasingly uniform and feed-driven.
+
+This project explores whether:
+
+Calm + Ownership + Spatial Presence
+
+can create a more emotionally engaging digital space.
+
+## 📌 Future Roadmap (Exploratory)
+
+- Grid snapping & collision control
+
+- Transform controls
+
+- Save room layout locally
+
+- Public room sharing
+
+- Backend integration
+
+- Asset monetization system
