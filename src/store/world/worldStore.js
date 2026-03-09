@@ -20,7 +20,7 @@ export const useWorldStore = create((set) => ({
           modelPath: asset.modelPath,
           position: [0, 0, 0],
           rotation: [0, 0, 0],
-          scale: [1, 1, 1],
+          scale: asset.defaultScale || [1, 1, 1],
         },
       ],
     })),

@@ -21,7 +21,10 @@ const PlacedObject = ({ object }) => {
           selectObject(object.id);
         }}
       >
-        <ModelFactory modelPath={object.modelPath} />
+        <ModelFactory
+          modelPath={object.modelPath}
+          targetHeight={object?.targetHeight || 1.0}
+        />
       </group>
       {isSelected && <ObjectControls object={object} objectRef={ref} />}
     </>
